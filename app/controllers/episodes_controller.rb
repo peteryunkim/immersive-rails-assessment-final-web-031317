@@ -6,5 +6,8 @@ class EpisodesController < ApplicationController
 
   def show
     @episode = Episode.find(params[:id])
+    @appearance = Appearance.find(@episode.appearances.ids)
   end
+
+
 end
